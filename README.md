@@ -1,7 +1,8 @@
-# IP Lookup Telex Integration
+# IP Geolocator Integration
 
 ## Description
-The **IP Lookup Telex Integration** allows users to retrieve geolocation details for any IP address mentioned in their messages. This integration fetches country, city, region, latitude, longitude, and ISP details for a given IP, providing valuable insights directly within Telex.
+The **IP Geolocator Integration** allows users to retrieve geolocation details for any IP address mentioned in their messages. This integration fetches country, city, region, latitude, longitude, and ISP details for a given IP, providing valuable insights directly within Telex.
+**Hosted on:**https://ip-geolocator-owpj.onrender.com/integration
 
 ## Features
 - Extracts IP addresses from messages.
@@ -18,8 +19,8 @@ Ensure you have the following installed:
 ### Setup
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/ip-lookup-telex.git
-   cd ip-lookup-telex
+   git clone https://github.com/telexintegrations/ip-geolocator.git
+   cd ip-geolocator
    ```
 2. Install dependencies:
    ```sh
@@ -45,7 +46,7 @@ Once the server is running, you can interact with the integration via HTTP reque
 ```json
 {
   "data": {
-    "descriptions": { "app_name": "IP Lookup Telex" },
+    "descriptions": { "app_name": "IP Geolocator" },
     "target_url": "/ip-lookup"
   }
 }
@@ -93,7 +94,7 @@ npm test
 ```
 
 ## Deployment
-1. Build the project:
+1. Choose your platform, build the project:
    ```sh
    npm run build
    ```

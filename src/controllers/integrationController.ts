@@ -6,11 +6,11 @@ const integration = (req: Request, res: Response, next: NextFunction) => {
     res.json({
         data: {
             descriptions: {
-                app_name: "IP Lookup Telex",
+                app_name: "IP Geolocator",
                 app_description: "Extracts IP addresses from messages and retrieves location details.",
                 app_url: baseUrl,
                 app_logo: "https://img.freepik.com/premium-vector/ip-address-vector-icon-can-be-used-web-hosting-iconset_717774-90046.jpg",
-                background_color: "#ffffff"
+                background_color: "#000000"
             },
             integration_type: "modifier",
             integration_category: "Monitoring & Logging",

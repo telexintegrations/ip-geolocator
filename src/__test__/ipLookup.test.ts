@@ -9,7 +9,7 @@ describe("IP Lookup Telex Integration", () => {
 
     expect(res.status).toBe(200);
     expect(res.body).toHaveProperty("data");
-    expect(res.body.data.descriptions.app_name).toBe("IP Lookup Telex");
+    expect(res.body.data.descriptions.app_name).toBe("IP Geolocator");
     expect(res.body.data.target_url).toContain("/ip-lookup");
   });
 

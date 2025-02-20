@@ -116,7 +116,8 @@ Once the server is running, you can interact with the integration via HTTP reque
 - If an invalid IP is provided:
 
   ```json
-  { "event_name": "ip_lookup", "message": "⚠️ Invalid IP address: 999.999.999.999", "status": "error", "username": "ip-lookup-bot" }
+  { "event_name": "ip_lookup", 
+  "message": "⚠️ Invalid IP address: 999.999.999.999", "status": "error", "username": "ip-lookup-bot" }
   ```
 
 ## Running Tests

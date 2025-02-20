@@ -27,7 +27,7 @@ const ipLookup = async (req: Request, res: Response): Promise<any> => {
     const ipMatch = message.match(/\b(?:\d{1,3}\.){3}\d{1,3}\b|\b(?:[a-fA-F0-9:]+:+)+[a-fA-F0-9]+\b/);
 
     if (!ipMatch) {
-      return res.status(400).json({ 
+      return res.status(200).json({ 
         event_name: "ip_lookup", 
         message: "⚠️ No valid IP address found in the message.", 
         status: "error", 
@@ -36,11 +36,11 @@ const ipLookup = async (req: Request, res: Response): Promise<any> => {
     }
 
     const ip = ipMatch[0];
-    const response = await axios.get(`${IP_LOOKUP_API}${ip}`);
+    const response = await axios.get(`${IP_LOOKUP_API}${ip}`, { timeout: 900 });
     
     // Check if IP lookup failed
     if (response.data.status === "fail") {
-      return res.status(400).json({ 
+      return res.status(200).json({ 
         event_name: "ip_lookup", 
         message: `⚠️ Invalid IP address: ${ip}`, 
         status: "error", 

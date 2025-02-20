@@ -27,20 +27,20 @@ describe("IP Lookup Telex Integration", () => {
     expect(res.body).toHaveProperty("status", "success");
   });
 
-  // ❌ Test: No valid IP in message (Should return 400)
-  it("should return 400 when no valid IP is found in the message", async () => {
+  // ❌ Test: No valid IP in message (Should return 200 for telex)
+  it("should return 200 when no valid IP is found in the message", async () => {
     const res = await request(app).post("/ip-lookup").send({
       channel_id: "12345",
       message: "Hello, how are you?"
     });
 
-    expect(res.status).toBe(400);
+    expect(res.status).toBe(200);
     expect(res.body).toHaveProperty("event_name", "ip_lookup");
     expect(res.body).toHaveProperty("message", "⚠️ No valid IP address found in the message.");
     expect(res.body).toHaveProperty("status", "error");
   });
 
-  // ❌ Test: Missing 'message' field (Should return 400)
+  // ❌ Test: Missing 'message' field (Should return 400 for telex)
   it("should return 400 when 'message' is missing", async () => {
     const res = await request(app).post("/ip-lookup").send({
       channel_id: "12345"
@@ -50,14 +50,14 @@ describe("IP Lookup Telex Integration", () => {
     expect(res.body).toHaveProperty("error", "Invalid request. 'message' is required.");
   });
 
-  // ❌ Test: Invalid IP lookup (Should return 400)
-  it("should return 400 for an invalid IP lookup", async () => {
+  // ❌ Test: Invalid IP lookup (Should return 200)
+  it("should return 200 for an invalid IP lookup", async () => {
     const res = await request(app).post("/ip-lookup").send({
       channel_id: "12345",
       message: "Check this IP: 999.999.999.999"
     });
 
-    expect(res.status).toBe(400);
+    expect(res.status).toBe(200);
     expect(res.body).toHaveProperty("event_name", "ip_lookup");
     expect(res.body).toHaveProperty("message", "⚠️ Invalid IP address: 999.999.999.999");
     expect(res.body).toHaveProperty("status", "error");

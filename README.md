@@ -104,6 +104,8 @@ npm test
    ```
 
 ## Screenshots
+![IP Geolocator](ip-geolocator.png)
+
 ![IP Lookup Telex Integration](ip-telex.png)
 
 --- 

@@ -1,5 +1,5 @@
 import request from "supertest";
-import app from "../config/app.config";  // Adjust this path if needed
+import app from "../config/app.config";
 
 describe("IP Lookup Telex Integration", () => {
   

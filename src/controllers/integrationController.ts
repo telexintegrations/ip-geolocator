@@ -10,7 +10,7 @@ const integration = (req: Request, res: Response, next: NextFunction) => {
                 app_description: "Extracts IP addresses from messages and retrieves location details.",
                 app_url: baseUrl,
                 app_logo: "https://img.freepik.com/premium-vector/ip-address-vector-icon-can-be-used-web-hosting-iconset_717774-90046.jpg",
-                background_color: "#000000"
+                background_color: "#ffffff"
             },
             integration_type: "modifier",
             integration_category: "Monitoring & Logging",

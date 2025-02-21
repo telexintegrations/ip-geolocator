@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
     res.send("Welcome to Telex IP Geolocator")
 });
 app.get("/integration", integration)

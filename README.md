@@ -2,8 +2,8 @@
 
 ## Description
 
-The **IP Geolocator Integration** allows telex users to retrieve geolocation details for any IP address sent to the channel. This integration fetches country, city, region, latitude, longitude, and ISP details for a given IP, providing valuable insights directly within Telex.
-Hosted on:<https://ip-geolocator-owpj.onrender.com/integration>
+The **IP Geolocator Integration** is a modifier integration that allows telex users to retrieve geolocation details for any IP address sent to the channel. This integration fetches country, city, region, latitude, longitude, and ISP details for a given IP, providing valuable insights directly within Telex.
+Hosted Json: <https://ip-geolocator-owpj.onrender.com/integration>
 
 ## What Is Telex?
 
